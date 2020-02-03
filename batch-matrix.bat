@@ -1,6 +1,5 @@
 @echo off
 title Batch Matrix
-cls
 :: 0	=	Black	 	8	=	Gray
 :: 1	=	Blue	 	9	=	Light Blue
 :: 2	=	Green	 	A	=	Light Green
@@ -10,12 +9,13 @@ cls
 :: 6	=	Yellow	 	E	=	Light Yellow
 :: 7	=	White	 	F	=	Bright White
 :: First number is background and second number is foreground.
-color 02
+color 0A
 
 :: Use %random% to generate random integer from 0 to 32767 (inclusive).
 :: Multiply by 2/32767 to get random binary (0 or 1).
 set bin="2/32767"
 
+cls
 :matrix
 set /a a0=%random%*%bin%
 set /a b0=%random%*%bin%
@@ -43,7 +43,6 @@ set /a w0=%random%*%bin%
 set /a x0=%random%*%bin%
 set /a y0=%random%*%bin%
 set /a z0=%random%*%bin%
-
 set /a a1=%random%*%bin%
 set /a b1=%random%*%bin%
 set /a c1=%random%*%bin%
